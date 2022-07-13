@@ -12,7 +12,6 @@ export function ContractWrite() {
   const {
     data,
     error,
-    isLoading: isWriteLoading,
     isError: isWriteError,
     write,
   } = useContractWrite({
@@ -31,7 +30,7 @@ export function ContractWrite() {
           <Account />
           <Button
             disabled={!write}
-            loading={isWriteLoading || isConfirming}
+            loading={isConfirming}
             onClick={() => write?.()}
             width="full"
           >
