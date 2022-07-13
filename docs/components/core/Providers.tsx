@@ -16,8 +16,8 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 
 const alchemyId = process.env.NEXT_PUBLIC_ALCHEMY_ID
 
-const { chains, provider, webSocketProvider } = configureChains(defaultChains, [
-  alchemyProvider({ alchemyId }),
+const { chains, provider } = configureChains(defaultChains, [
+  alchemyProvider({ alchemyId, pollingInterval: 10000 }),
 ])
 
 const client = createClient({
@@ -50,7 +50,6 @@ const client = createClient({
     }),
   ],
   provider,
-  webSocketProvider,
 })
 
 type Props = {

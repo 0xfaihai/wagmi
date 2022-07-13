@@ -1,3 +1,5 @@
 export { ConnectWallet } from './ConnectWallet'
+export { ContractWrite } from './ContractWrite'
+export { SendTransaction } from './SendTransaction'
 export { SignInWithEthereum } from './SignInWithEthereum'
 export { SignMessage } from './SignMessage'
