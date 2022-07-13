@@ -1,10 +1,6 @@
 import * as React from 'react'
 import { Button, Stack, Text } from 'degen'
-import {
-  useAccount,
-  useContractWrite,
-  useWaitForTransaction,
-} from 'wagmi'
+import { useAccount, useContractWrite, useWaitForTransaction } from 'wagmi'
 
 import { PreviewWrapper } from '../core'
 import { Account, WalletSelector } from '../web3'
